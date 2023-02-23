@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TO-DO LIST</title>
+
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	
+	<header>
+		
+		<h1>TO-DO LIST</h1>
+		<form id="new-task-form">
+			<input 
+				type="text" 
+				name="new-task-input" 
+				id="new-task-input" 
+				placeholder="Add Your Task" />
+			<input 
+				type="submit"
+				id="new-task-submit" 
+				value="Add task" />
+		</form>
+	</header>
+	<main>
+		<section class="task-list">
+			<h2>Tasks </h2>
+
+			<div id="tasks">
+
+			</div>
+			<button id="downloadbtn">Download List</button>
+		</section>
+	</main>
+
+
+	<script src="main.js"></script>
+</body>
+</html>

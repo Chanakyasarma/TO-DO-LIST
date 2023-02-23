@@ -1,0 +1,208 @@
+:root {
+	--dark: #06382e;
+	--darker: #035148;
+	--darkest: #172711;
+	--grey: #53715f;
+	--green: #2cfd60;
+	--purple: #2cfd60;
+	--light: #EEE;
+	--darkb: #093306;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	--s: 80px; /* control the size */
+  --c: #093306;
+  
+  --_g: 
+    #0000 calc(-650%/13) calc(50%/13),var(--c) 0 calc(100%/13),
+    #0000 0 calc(150%/13),var(--c) 0 calc(200%/13),
+    #0000 0 calc(250%/13),var(--c) 0 calc(300%/13);
+  --_g0: repeating-linear-gradient( 45deg,var(--_g));
+  --_g1: repeating-linear-gradient(-45deg,var(--_g));
+  background:
+    var(--_g0),var(--_g0) var(--s) var(--s),
+    var(--_g1),var(--_g1) var(--s) var(--s) #06382e;
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--green);
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	font-weight: 700;
+}
+
+
+#new-task-form {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 10px;
+	margin-right: 2px;
+	color: var(--light);
+	font-size: 1.2rem;
+}
+
+#new-task-input::placeholder {
+	color: var(--grey);
+}
+
+#new-task-submit {
+	color: var(--green);
+	background-color:var(--darker);
+	font-size: 1.1rem;
+	font-weight: 700;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	
+	
+}
+
+
+.task-list {
+	padding: 1rem;
+	background: rgba(177, 251, 229, 0.25);
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	border-radius: 10px;
+	border: 1px solid ;
+	border-color: #87ed19;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--darkb);
+	margin-bottom: 1rem;
+}
+.task-list h2 input{
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--darkb);
+	margin-bottom: 1rem;
+	padding: 0rem 0.1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background: rgba(166, 208, 245, 0.137);
+	padding: 1rem;
+	border-radius: 7px;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: var(--green);
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--green), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.task .actions .edit:hover {
+	background-image: linear-gradient(to right, var(--darkest), var(--darkest));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+	color: rgb(131, 2, 2);
+}
+.task .actions .delete:hover {
+	color: rgb(253, 7, 7);
+}
+
+#downloadbtn {
+	color: var(--green);
+	background-color:var(--darker);
+	font-size: 1.1rem;
+	font-weight: 700;
+	cursor: pointer;
+	border-radius: 10px;
+}
