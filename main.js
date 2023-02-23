@@ -14,19 +14,24 @@ window.addEventListener('load', () => {
 	input.a
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const task = input.value;
-        tasks.push(task);
-
-        // Save tasks to local storage
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-
-        const task_el = createTaskElement(task);
-        list_el.appendChild(task_el);
-
-        input.value = '';
-    });
+		e.preventDefault();
+	
+		const task = input.value;
+	
+		// Check if task is not blank
+		if (task.trim() !== '') {
+			tasks.push(task);
+	
+			// Save tasks to local storage
+			localStorage.setItem('tasks', JSON.stringify(tasks));
+	
+			const task_el = createTaskElement(task);
+			list_el.appendChild(task_el);
+	
+			input.value = '';
+		}
+	});
+	
 
     function createTaskElement(task) {
         const task_el = document.createElement('div');
