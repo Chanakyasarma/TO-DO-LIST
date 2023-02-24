@@ -1,4 +1,3 @@
-To View the Project Click on:
 
 ### `Project Title`
 <b>TO-DO LIST</b>
@@ -6,7 +5,7 @@ To View the Project Click on:
 ### `View Project here`
 
 Runs the app in your browser.<br />
-Open [https://to-do-list-chanakyasarma.vercel.app/](https://to-do-list-chanakyasarma.vercel.app/) to view it in the browser.
+To View the Project Click on: [https://to-do-list-chanakyasarma.vercel.app/](https://to-do-list-chanakyasarma.vercel.app/) .
 
 
  ### `Project Description`
